@@ -24,7 +24,6 @@ let videoPlayer = document.getElementById("video-player");
 let videoCon = document.getElementsByClassName("video-container")[0];
 let bgScreenForvideo = document.getElementById("background-space-video");
 
-
 playbutton.addEventListener('click', () => {
 
     videoPlayer.style.display = "block";
@@ -35,10 +34,6 @@ playbutton.addEventListener('click', () => {
 })
 
 // let valueOfBg = bgScreenForvideo.classList.contains("bg-screen")
-
-
-
-
 
 bgScreenForvideo.addEventListener("click", () => {
     videoPlayer.style.display = "none";
@@ -57,7 +52,6 @@ const listOfChars = [...document.getElementsByClassName("li")];
 let char_container = [...document.getElementsByClassName("char-stat-container")];
 
 
-
 listOfChars.forEach((element, index) => {
     element.addEventListener("click", () => {
 
@@ -71,14 +65,25 @@ listOfChars.forEach((element, index) => {
 
         char_container[index].classList.add("displayFlex")
 
-
         element.classList.add('active');
-
-
     });
 });
 
+/* animation for display charaters line */
 
+const hiddenElements = document.querySelectorAll(".hidden");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        };
+    });
+});
+
+hiddenElements.forEach(element => {
+    observer.observe(element);
+});
 
 
 

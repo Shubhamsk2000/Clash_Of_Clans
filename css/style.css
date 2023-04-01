@@ -255,3 +255,15 @@ header nav ul li:active a {
     backdrop-filter: blur(2px);
     background-color: #00000064;
 }
+
+/* animation for display charaters line */
+.hidden{
+opacity: 0;
+filter: blur(4px);
+transition:opacity 1.5s ease, filter 1s ease, transform 1s ease;
+}
+
+.show{
+opacity: 1;
+filter: blur(0px);
+}
