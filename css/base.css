@@ -1,0 +1,204 @@
+.outline {
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.1s;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.outline p {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 10;
+}
+
+.home-base {
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url("../assets/images/home-base-bg.webp");
+    background-position: 10% 80%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: darken;
+    transition: all 0.5s;
+    position: relative;
+
+}
+
+.builder-base {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.494) url("../assets/images/builder-base-bg.png");
+    background-position: 0% 50%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: darken;
+    transition: all 0.5s;
+}
+
+.clan-capital {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.494) url("../assets/images/clan-capital-bg.png");
+    background-position: 0% 50%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: darken;
+    transition: all 0.5s;
+
+}
+
+.clan-capital:hover {
+    transform: scale(1.1);
+}
+
+.outline p:hover~.clan-capital {
+    transform: scale(1.1);
+}
+
+/* home base barbarian hover effect */
+#barbarian {
+    position: absolute;
+    top: -10rem;
+    right: 10rem;
+    display: none;
+}
+
+.outline-1 {
+    height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.205);
+    transition: all 0.3s;
+
+}
+
+.outline-1:hover {
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.00);
+}
+
+.outline-1:hover~.home-base {
+    transform: scale(1.1);
+}
+
+.outline-1:hover~#barbarian {
+    display: inline;
+}
+
+/* .builder-base hover effect */
+.outline-2 {
+    height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.205);
+    transition: all 0.3s;
+}
+
+.outline-2:hover {
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.00);
+}
+
+.outline-2:hover~.builder-base {
+    transform: scale(1.1);
+}
+
+#archer {
+    position: absolute;
+    top: -1rem;
+    right: 8rem;
+    height: 34rem;
+    display: none;
+}
+
+.outline-2:hover~#archer {
+    display: inline;
+}
+
+/* clan capital effect */
+.outline-3 {
+    height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.273);
+    transition: all 0.3s;
+}
+
+.outline-3:hover {
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.00);
+}
+
+.outline-3:hover~.clan-capital {
+    transform: scale(1.1);
+}
+
+#super-wizard {
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+    height: 39rem;
+    display: none;
+}
+
+.outline-3:hover~#super-wizard {
+    display: inline;
+}
+
+@media (max-width:1100px) {
+    #barbarian {
+        height: 33rem;
+        right: 0rem;
+        top: -5rem;
+    }
+
+    #archer {
+        top: 0rem;
+        right: -2rem;
+        height: 26rem;
+    }
+
+    #super-wizard {
+        top: -3rem;
+        right: -4rem;
+        height: 28rem;
+    }
+
+    .outline p {
+        font-size: 1.5rem;
+        backdrop-filter: blur(2px);
+        text-shadow: 0 0 15px black;
+    }
+}
+
+@media(max-width:700px) {
+    #barbarian {
+        height: 22rem;
+        right: 1rem;
+        top: -1rem;
+    }
+
+    #archer {
+        top: 3rem;
+        right: -2rem;
+        height: 17rem;
+    }
+
+    #super-wizard {
+        top: 1rem;
+        right: -2rem;
+        height: 17rem;
+    }
+
+}

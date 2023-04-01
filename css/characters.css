@@ -1,0 +1,177 @@
+#characters {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 100svh;
+    background: rgba(0, 0, 0, 0.258) url("../assets/images/bg-characters.jpg");
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    width: 100%;
+    backdrop-filter: blur(4px);
+}
+
+.char-stat-container {
+    position: absolute;
+    display: flex;
+    height: 100svh;
+    min-width: 100svw;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    padding: 0.7rem;
+    transform: translateX(100%);
+}
+
+.character-img img {
+    position: relative;
+    height: 39rem;
+    z-index: 1;
+}
+
+#balloon-img {
+    top: -4rem;
+    left: 5rem;
+}
+
+#bowler-img {
+    left: -1rem;
+    height: 32rem;
+}
+
+#super-dragon-img {
+    left: -6rem;
+    height: 29rem;
+}
+
+.character-stats img {
+    position: relative;
+    height: 24rem;
+    border-radius: 23px;
+    z-index: 2;
+}
+
+
+.displayFlex {
+    transform: translateY(0%);
+}
+
+/* bottom display line for characters profile */
+.char-display-line {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(100svh - 10rem);
+    height: 10.2rem;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.163);
+    backdrop-filter: blur(3px);
+    padding: 0rem 0.5rem;
+    overflow: auto;
+}
+
+.swipe {
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 110px;
+    gap: 2rem;
+    text-align: center;
+    padding: 0.6rem;
+    overflow-inline: auto;
+    overscroll-behavior: contain;
+    overflow-y: hidden;
+    scroll-snap-type: inline mandatory;
+}
+
+.swipe img {
+    height: 6rem;
+    margin: 5px 0px;
+}
+
+.li {
+    background: transparent url("../assets/images/img-swipe-card.png");
+    background-position: top;
+    width: 110px;
+    aspect-ratio: 110/150;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    list-style-type: none;
+    box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.li:hover {
+    background-position: 0% 100%;
+    color: black;
+}
+
+.active {
+    background-position: 0% 100%;
+    color: black;
+}
+
+@media (max-width:800px) {
+    .swipe {
+        gap: 0rem;
+        width: 100%;
+        grid-auto-columns: 90px;
+    }
+
+    .swipe img {
+        height: 4rem;
+    }
+
+    .li {
+        width: 78px;
+    }
+
+    .li p {
+        font-size: .7rem;
+    }
+
+    .character-stats img {
+        height: 15rem;
+        border-radius: 15px;
+        top: 8rem;
+    }
+
+    .character-img img {
+        height: 25rem;
+    }
+
+    #bowler-img {
+        left: -10rem;
+        height: 25rem;
+    }
+
+    #balloon-img {
+        top: -4rem;
+        left: 1rem;
+    }
+
+    #super-wizard-img {
+        left: -5rem;
+    }
+
+    #super-dragon-img {
+        left: -19rem;
+        top: -5rem;
+    }
+
+    #super-valkarie-img {
+        left: -7rem;
+    }
+}

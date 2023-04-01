@@ -1,0 +1,68 @@
+.social-media-links{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(36, 34, 34);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-media-links a{
+    text-decoration: none;
+    color: rgb(250, 235, 235);
+    font-size: 2.4rem;
+    position: relative;
+    left:10%;
+    transition:transform 0.2s ease-in;
+}
+
+.social-media-links a:nth-child(1){
+    font-size: 2.7rem;
+}
+
+.social-media-links a:hover{
+    transform: translateY(-5px);
+    text-shadow: 0px 0px 19px rgba(255, 255, 255, 0.742);
+}
+
+.social-media-links a:active{
+    transform: translateY(-5px);
+    text-shadow: 0px 0px 19px rgba(255, 255, 255, 0.742);
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(18, 17, 17);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.footer-content img{
+    max-width:10rem ;
+    width: 30%;
+}
+
+.footer-content p{
+    text-align: center;
+}
+
+.supercell-logo{
+filter: invert(1);
+}
+
+@media (max-width:700px){
+    .social-media-links{
+        height:55px ;
+        gap: 1.2rem;
+    }
+    .social-media-links a{
+        font-size: 2rem;
+    }
+    .social-media-links a:nth-child(1){
+        font-size: 2.3rem;
+    }
+}
